@@ -1,4 +1,4 @@
-function decodeStrings(s) {
+function decodeString(s) {
     let numArr = s.match(/\d+/g);
     let letterArr = s.match(/[a-z]+/g);
     let finalStr = '';
@@ -31,12 +31,12 @@ function decodeStrings(s) {
     }
 }
 
+//testing:
+// decodeString("4[ab]") //abababab
 
-// decodeStrings("4[ab]");
-//abababab
-// decodeStrings("2[b3[a]]");
-//baaabaaa
-// decodeStrings("2[a3[b5[c]]]");
-//abcccccbcccccbcccccabcccccbcccccbccccc
-decodeStrings("2[v2[b4[z]]]") // vbzzzzbzzzzvbzzzzbzzzz
-// decodeStrings("2[v2[b4[z]]]")
+// decodeString("2[b3[a]]") //baaabaaa
+
+// decodeString("2[a3[b5[c]]]") //abcccccbcccccbcccccabcccccbcccccbccccc
+
+decodeString("2[b3[a4[cd]]]") //bacdcdcdcdacdcdcdcdacdcdcdcdbacdcdcdcdacdcdcdcdacdcdcdcd
+
